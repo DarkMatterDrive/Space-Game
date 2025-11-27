@@ -1,3 +1,5 @@
+let CarryB = false;
+let CarryR = false;
 let PlayerBImage;
 let PlayerRImage;
 let speed = 3;
