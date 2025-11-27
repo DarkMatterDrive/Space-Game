@@ -1,3 +1,5 @@
+let BHealth = 16;
+let RHealth = 16;
 let CarryB = false;
 let CarryR = false;
 let PlayerBImage;
