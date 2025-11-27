@@ -1,5 +1,9 @@
 function PlayerR()
 {
+  fill(0,255,0)
+  rect(PlayerRX,PlayerRY-5*REM,RHealth*REM,2*REM)
+  fill(255,0,0)
+  rect(PlayerRX+RHealth*REM,PlayerRY-5*REM,16*REM-RHealth*REM,2*REM)
   noSmooth()
   image(PlayerRImage,PlayerRX,PlayerRY,16*REM,16*REM);
   PlayerRY += GravityR*REM
