@@ -1,5 +1,6 @@
 function PlayerB()
 {
+  
   noSmooth()
   image(PlayerBImage,PlayerBX,PlayerBY,16*REM,16*REM);
   PlayerBY += GravityB*REM
@@ -21,6 +22,15 @@ function PlayerB()
     {
       PlayerBX = VW-16*REM
     }
+  if(PlayerBX+16*REM >= PlayerRX && PlayerBX <= PlayerRX+16*REM && PlayerBY+16*REM >= PlayerRY && PlayerBY+16 <= PlayerRY+16*REM)
+    {
+      PlayerBY = PlayerRY-16*REM;
+      OnGroundB = true;
+      CarryB = true;
+    }else
+      {
+        CarryB = false;
+      }
   if (keyIsDown(LEFT_ARROW) === true) {
     MotionB = -1.25;
   }
@@ -41,7 +51,13 @@ function PlayerB()
     if(OnGroundB == true)
 {
   OnGroundB = false
-  GravityB = -1.5;
+  if(CarryR == true)
+    {
+      GravityB = -0.75;
+    }else
+    {
+      GravityB = -1.5;
+    }
 }
   }
   if(GravityB < 1.5)
