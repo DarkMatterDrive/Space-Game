@@ -1,9 +1,5 @@
 let PlayerBImage;
-let PlayerBY = 50;
-let PlayerBX = 67; // idk bro
 let PlayerRImage;
-let PlayerRY = 50;
-let PlayerRX = 333;
 let speed = 3;
 let timer;
 var VW = 400;
@@ -25,6 +21,12 @@ let Upscale = 1
 VW = VW * Upscale;
 VH = VH * Upscale;
 REM = REM * Upscale;
+
+let PlayerBY = 16*REM;
+let PlayerBX = 16*REM;
+
+let PlayerRY = 16*REM;
+let PlayerRX = VW-32*REM;
 
 function preload(){
 PlayerBImage = loadImage("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0klEQVR4nKSTLQ4CMRCFZzfr0Q0JQYHrNeowOO6ABY0EyxUIDoOr5BigCAmp5gQlbZhmOv2BsE9tZvZ7nd157SCVhe9qkgeEtdYgpazSQojANhx2Wu5OoTgYTiP4vF1EJi13r8HjyQhm62NU66AgDjvdb4+kVjT4Vb0N2lLj9bzCXwb71bwK4BY+smjgw6OUikz4FHSFuHL3D6LwYPNy2GQnoDAaJMJJ6ItOeAj2IRckBOlUmWg3wKJsKcxP5J8AtcuEJmRML2MMwlWDYML6uZrXGwAA///rE/i5AAAABklEQVQDAPT/RLRZ5yPnAAAAAElFTkSuQmCC");
