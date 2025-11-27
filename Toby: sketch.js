@@ -43,9 +43,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,155,155);
-  fill(255,0,0);
-  //square(155,boxY,20);
+  background(0);
   PlayerB()
   PlayerR()
 }
