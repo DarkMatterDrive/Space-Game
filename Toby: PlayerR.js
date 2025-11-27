@@ -21,6 +21,15 @@ function PlayerR()
     {
       PlayerRX = VW-16*REM
     }
+  if(PlayerRX+16*REM >= PlayerBX && PlayerRX <= PlayerBX+16*REM && PlayerRY+16*REM >= PlayerBY && PlayerRY+16 <= PlayerBY+16*REM)
+    {
+      PlayerRY = PlayerBY-16*REM;
+      OnGroundR = true;
+      CarryR = true;
+    }else
+      {
+        CarryR = false;
+      }
   if (keyIsDown(65) === true) {
     MotionR = -1.25;
   }
@@ -41,7 +50,13 @@ function PlayerR()
     if(OnGroundR == true)
 {
   OnGroundR = false
-  GravityR = -1.5;
+  if(CarryB == true)
+    {
+      GravityR = -0.75;
+    }else
+    {
+      GravityR = -1.5;
+    }
 }
   }
   if(GravityR < 1.5)
