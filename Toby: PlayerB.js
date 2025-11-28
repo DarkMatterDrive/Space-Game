@@ -8,13 +8,13 @@ function PlayerB()
   image(PlayerBImage,PlayerBX,PlayerBY,16*REM,16*REM);
   PlayerBY += GravityB*REM
   PlayerBX += MotionB*REM
-  if(PlayerBY < VH-16*REM)
+  if(PlayerBY < Bottom-16*REM)
   {
     OnGroundB = false
   }
-  if(PlayerBY > VH-16*REM)
+  if(PlayerBY > Bottom-16*REM)
   {
-    PlayerBY = VH-16*REM
+    PlayerBY = Bottom-16*REM
     OnGroundB = true
   }
   if(PlayerBX < 0*REM)
@@ -40,6 +40,7 @@ function PlayerB()
 
   if (keyIsDown(RIGHT_ARROW) === true) {
     MotionB = 1.25;
+    
   }
   
   if(keyIsDown(LEFT_ARROW) === false)
@@ -54,6 +55,7 @@ function PlayerB()
     if(OnGroundB == true)
 {
   OnGroundB = false
+  LookB = 0;
   if(CarryR == true)
     {
       GravityB = -0.75;
