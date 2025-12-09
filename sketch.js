@@ -12,8 +12,16 @@ let PlayerBImage;
 let PlayerRImage;
 let EnemyDroneImage;
 let EnemyDroneMove = true;
+
 var VW = 400;
 var VH = 600;
+if (typeof window.globalWidth === 'undefined' || typeof window.globalHeight === 'undefined') {
+  console.log("nope?");
+} else {
+  VW = window.globalWidth;
+  VH = window.globalHeight;
+}
+
 let OnGroundB = false;
 let OnGroundR = false;
 let GravityB = 1.5;
